@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Brincadeira dos Filmes!</title>
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body onload="tema()">
+
+
+
+    <section id="load-javascript" class="hidden">
+      <script src="js/jquery-3.2.1.slim.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/core.js"></script>
+
+    </section>
+
+    <header class:"container-fluid">
+      <div class="text-center">
+        <h2 id="Mtopo">Brincadeira dos Filmes</h2>
+      </div>
+    </header>
+    <br>
+
+    <div class="espacado">
+      <section class:"container">
+        <div class="text-center">
+          <br>
+          <h4 id="h41" class="somedaqui">Obrigado!</h4>
+          <h4 id="h42" class="somedaqui">Espero que tenham se divertido.</h4>
+          <h4 id="h43" class="somedaqui">Clique no botão para recarregar.</h4>
+          <h1 id="Mtexto" class="aparecendo"><b>Escolha o modo da brincadeira</b></h1>
+          <br>
+        </div>
+
+        <div class="text-center">
+          <hr>
+          <!-- INICIO DOS BOTOES-->
+          <button type="button" class="somedaqui btn btn-primary btn-lg corbotao" id="btproximo" onclick="proximaRodada()"><b>Próximo</b></button>
+          <button type="button" class="somedaqui btn btn-primary btn-lg corbotao" id="btrecarregar" onclick="fimdejogo()"><b>Recarregar</b></button>
+          <section class="btx" id="btmodos">
+            <button type="button" class="btn btn-primary btn-lg corbotao" onclick="modojogo(20)"><b>20 Filmes</b></button>
+            <button type="button" class="btn btn-primary btn-lg corbotao" onclick="modojogo(50)"><b>50 Filmes</b></button>
+            <button type="button" class="btn btn-primary btn-lg corbotao" onclick="modojogo(100)"><b>100 Filmes</b></button>
+            <button type="button" class="btn btn-primary btn-lg corbotao" onclick="modojogo(qtema)" id="btinfinito"><b>Infinito!</b></button>
+          </section>
+          <hr>
+        </div>
+      </section>
+    </div>
+
+
+<textarea name="temas" id="areatemas" rows="400" cols="400" class="somedaqui">
+  Um filme que lembre sua infância
+  Um filme que marcou a sua adolescência
+  Um filme que passe na Sessão da Tarde que você adora
+  Um filme que você considera um clássico
+  O melhor filme de seu diretor favorito
+  Um filme de vampiro/vampiros
+  Um filme que você gostaria de ter assistido no cinema
+  Um filme ruim de um diretor bom
+  Um filme de baixo orçamento que você gosta
+  Um filme com uma ótima música-tema
+  Um filme que te traga boas lembranças
+  Um filme que você dormiu antes de terminar
+  Um filme que você nunca conseguiu assistir inteiro
+  Um filme que tenha sido baseado em um livro
+  Um filme que tenha participação de um famoso-não-ator
+  Um filme que utilizou cenas reais
+  Um filme que ganhou o Oscar merecidamente
+  Um filme que você nunca assistiria de novo
+  O melhor documentário
+  Um filme que possui uma excelente trilha sonora
+  Um filme que te faça rir
+  Um filme bom com um final ruim
+  Um filme que você gostou mas tem vergonha de falar
+  Um filme que te dá medo
+  Um curta-metragem que você adora
+  Um filme que lembra a sua família
+  Um péssimo filme
+  Um excelente filme musical
+  Um filme baseado em um jogo
+  Um filme que você não entendeu ou teve dificuldade
+  Um bom filme infantil
+  Um filme de época
+  Um filme que você não indicaria
+  Um filme de epidemia
+  Um filme que fica na cabeça
+  Um filme de humor negro
+  Um filme de atores desconhecidos
+  Um filme de máfia
+  Um filme que tenha uma ótima frase de efeito
+  Um filme que lançou algum ator que você goste
+  Um filme de faroeste
+  Um filme que te fez chorar
+  Um filme de guerra
+  Um filme de um diretor não muito conhecido
+  Um filme que te deprima
+  Um filme que você gostaria de atuar
+  Um filme ridículo
+  Um filme que você soube o final antes de assistir
+  Um filme para assistir a dois
+  Uma animação clássica (2D)
+  Uma animação
+  Um filme que seja biográfico
+  Um filme paródia
+  Um filme cult
+  Um filme com mérito pouco reconhecido
+  Um filme cujo personagem principal é um animal
+  Um filme que você não conseguiu ver todo de uma vez
+  Um filme de enredo simples
+  Um filme com muito sangue
+  Um filme preto e branco
+  O último bom filme que você assistiu
+  Uma comédia sem graça
+  Um filme que te lembre sexo (não vale pornô)
+  Um filme complexo
+  Um filme que te ensinou algo muito importante
+  Um filme que mudou seu modo de ver a vida
+  Um filme que não faça sentido
+  Um filme de zumbi
+  Um filme de monstros
+  Um filme de gigante (vale monstros gigantes)
+  Um filme muito meloso
+  O próximo filme que você quer assistir
+  Um filme com seu ator prefeiro
+  Um filme que todo mundo gosta, menos você
+  Um filme que ninguém gosta, mas você adora
+  Um filme que o trailer tenha sido melhor que o filme
+  Um filme de super-herói
+  O melhor filme do Universo Marvel
+  Um filme nacional
+  Um filme gravado em lugar exótico
+  Um filme em que o título seja um nome próprio
+  Um filme que você viu sem saber NADA antes, e adorou
+  Um filme que você considere pesado
+  Um filme que tenha um personagem que lembre alguém próximo
+  Um filme que o protagonista seja uma criança
+  Um filme com grande bilheteria
+  Um filme de catástrofe
+  Um filme "trash"
+  A melhor saga de filmes
+  O universo de fantasia do cinema que você mais gosta
+  Um filme com númeral no título
+  Um filme para reflexão
+  Um filme com mensagem subliminar
+  Um filme que o segundo tenha sido melhor que o primeiro
+  Um filme ótimo que a(s) sequência(s) foi/foram péssima(s)
+  Um filme que não obedece uma ordem cronológica
+  Um filme com cena de sexo explícito
+  Um filme que o final é surpreendente
+  Um filme que não deveria ter continuação
+  Um filme de comédia
+  Um filme de comédia não convencional
+  Um filme que o diretor também atue
+  Um filme com vilão inesquecível
+  Um filme de ficção científica
+  O melhor casal do cinema
+  Um filme que você já assistiu várias vezes
+  um filme que o protagonista morre
+  Um filme que o protagonista está morto
+  Um filme da década de 60
+  Um filme da década de 70
+  Um filme da década de 80
+  Um filme da década de 90
+  Um filme da decada de 2000
+  Um filme da década de 2010
+  Um filme muito longo
+  Um filme lançamento
+  Um filme que foi fracasso de bilheteria
+  Um filme com título esquisito/estranho
+  Um filme de com boas cenas de tiroteio
+  Um filme com cenas de luta incríveis
+  Um filme com paisagens incríveis
+  Um filme de serial killer
+  Um filme que você sempre recomenda
+  Um filme de investigação policial
+  Um filme de fantasma
+  Um filme que fale sobre igreja/religião
+  Um filme da Disney
+  Um filme da Dreamworks
+  Um filme com robôs
+  Uma frase clássica do cinema
+  O melhor filme de Brucutu (Stallone, Schwarzenegger etc)
+  Um filme na selva
+  Um filme no deserto
+  Um filme de prisão
+  Um filme que é melhor que o livro
+  O tema mais clássico da história
+  Um personagem memorável infantil
+  Um personagem memorável feminino
+  Um filme que forma caráter
+  Um filme com carros
+  Um filme que é uma homenagem ao cinema
+  Um filme da Pixar
+  Um ator que você acha insuportável
+  Uma atriz que você acha insuportável
+  O ator ou atriz mais versátil
+  O filme mais assustador que você já assistiu
+  O filme mais engraçado que você já assistiu
+  O filme mais chato que você já assistiu
+  Um filme que você teve vontade de sair do cinema
+  O melhor filme de Quentin Tarantino
+  Um filme de dança
+  Um filme de doença
+  O melhor filme de amor
+  Um filme biblíco
+  Um filme baseado em fatos históricos
+  Um filme baseado em fatos reais
+  Um filme dos trapalhões
+  Um filme para assistir comendo pipoca
+  Um filme muito divertido
+  Um filme de Extraterrestes
+  Um filme que o ator já morreu
+  Um filme feito com câmera na mão
+  Um filme que você não viu, mas sabe que tem que ver
+  O melhor filme da trilogia Senhor dos Anéis
+  O melhor filme da saga Harry Potter
+  O melhor filme de porrada
+  O melhor filme do universo DC
+  O melhor filme da atriz mais linda do cinema
+  O melhor filme do ator mais bonito do cinema
+  O melhor filme que não tem final
+  Um filme que lembra infância
+  Um filme nacional engraçado
+  Um filme nacional com crítica social
+  Um filme com crítica social disfarçada
+  Um filme para ver com os amigos
+  O ator mais porradeiro do cinema
+  A atriz mais porradeira do cinema
+  Um diretor que você vai assistir sem nem saber sobre o que é o filme
+  Qual filme antigo merecia um remake
+  Qual o melhor Star Wars
+  Um filme que faz sentir bem
+  O melhor blockbuster de todos os tempos
+  O filme com a maquiagem inacreditável
+  Um filme sobre computador/internet
+  Um filme de advogado
+  Um filme de médico/hospital
+  Um filme road-trip
+  Um filme de terror psicológico
+  Um filme de invasão
+  Um filme sobre amizade
+  Um filme de prostituição
+  Um filme besteirol
+  Um filme de escola ou universidade
+  Um filme sobre superação
+  Um filme de catástrofe
+  Um filme futurista
+  Um filme sobre cotidiano
+  Um filme sobre perda
+  Um filme que te causa saudade de alguém
+  Um filme que você tenha uma camisa ou quadro
+  Um filme que você pensou em um final melhor que o original
+</textarea>
+    <br><br><br>
+
+    <div class="container">
+      <div class="row">
+        <div class="col text-center botoesdomenu">
+          <button type="button" id="bmhome" class="btn btn-menu btn-sm btnimenu somedaqui" onclick="menuinicio()" alt="Voltar ao início"><img src="img/ihome.png" height="20px" width="20px"></button>
+          <button type="button" id="bmrefresh" class="btn btn-menu btn-sm btnimenu somedaqui" onclick="menureiniciar()"><img src="img/irefresh.png" height="20px" width="20px"></button>
+          <button type="button" id="bmback" class="btn btn-menu btn-sm btnimenu somedaqui" onclick="menuvoltar()"><img src="img/iback.png" height="20px" width="20px"></button>
+          <button type="button" class="btn btn-menu btn-sm" data-toggle="modal" data-target="#comofunciona">
+            <b>Como funciona?</b>
+          </button>
+          <button type="button" class="btn btn-menu btn-sm btnimenu" onclick="menuconfig()"><img src="img/iconfig.png" height="20px" width="20px"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="comofunciona" tabindex="-1" role="dialog" aria-labelledby="comoTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title" id="comoTitle"><b>Como funciona a brincadeira?</b></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <b>
+            A brincadeira funciona assim: Reúna um monte de amigos.
+            <hr>
+            Os temas vão rolando, e todos dizem o primeiro filme que vier na cabeça!
+            <hr>
+            Se quiserem conversar e discutir sobre as escolhas, sintam-se à vontade!
+            <hr>
+            Com certeza vai dar muito bate-papo e discussões bacanas! Diversão garantida para qualquer amante de cinema!
+            <hr>
+            Envie mais ideias de tema para <a href="mailto:abelrs@gmail.com?Subject=Brincaeira%20dos%20filmes" target="_blank">abelrs@gmail.com</a>
+            </b>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"><b>Entendi!</b></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer" id="embaixo">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <span class="esconde">Inspirado no </span><a href="http://cinemacomrapadura.com.br/rapaduracast-podcast/" target="_blank"><img src="img/rapadura.png" height="20px" alt="RapaduraCast"></a>
+          </div>
+          <div class="col text-center">
+            <span class="esconde"> </span><a href="http://www.abelrs.com.br" target="_blank"><img src="img/logoA.png" height="30px" alt="Logotipo Abel's Web"> AbelRS</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+  </body>
+</html>
